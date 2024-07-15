@@ -84,6 +84,28 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE. -->
 
+<!-- The MIT License (MIT)
+
+Copyright (c) 2024 Ryan Mulligan (https://codepen.io/hexagoncircle/pen/XWbWKwL)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. -->
+
   
 </head>
 <body>
@@ -166,21 +188,38 @@ SOFTWARE. -->
 
 <!-- profile 카드 -->
 
-  - var cards = [{ title: 'Mountain View', copy: 'Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains', button: 'View Trips' }, { title: 'To The Beach', copy: 'Plan your next beach trip with these fabulous destinations', button: 'View Trips' }, { title: 'Desert Destinations', copy: 'It\'s the desert you\'ve always dreamed of', button: 'Book Now' }, { title: 'Explore The Galaxy', copy: 'Seriously, straight up, just blast off into outer space today', button: 'Book Now' }]
-
-
-mixin card(title, copy, button)
-  .card
-    .content
-      h2.title= title
-      p.copy= copy
-      button.btn= button
-
-main.page-content
-  each card in cards
-    +card(card.title, card.copy, card.button)
-
-<!--   profile 카드 -->
+<!-- partial:index.partial.html -->
+<main class="page-content">
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Mountain View</h2>
+      <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">To The Beach</h2>
+      <p class="copy">Plan your next beach trip with these fabulous destinations</p>
+      <button class="btn">View Trips</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Desert Destinations</h2>
+      <p class="copy">It's the desert you've always dreamed of</p>
+      <button class="btn">Book Now</button>
+    </div>
+  </div>
+  <div class="card">
+    <div class="content">
+      <h2 class="title">Explore The Galaxy</h2>
+      <p class="copy">Seriously, straight up, just blast off into outer space today</p>
+      <button class="btn">Book Now</button>
+    </div>
+  </div>
+</main>
+<!-- partial -->
   
   
 <!-- partial -->
