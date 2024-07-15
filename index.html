@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:url" content="https://gongmyeong-201219.github.io/gongmyeong.github.io/">
+  <meta property="og:title" content="共命之鳥">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://i.ibb.co/kJkwJF9/GM-thum-img.jpg" />
+  <meta property="og:description" content="共命之鳥 웹사이트입니다.">
+  <title>共命之鳥-公知</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@200..900&display=swap" rel="stylesheet">
+
+  <link rel="icon" href="https://i.ibb.co/hW59Q7y/GM-ico.png">
+  
+<!--   <The MIT License (MIT)
+  
+  Copyright (c) 2024 jesper landberg (https://codepen.io/ReGGae/pen/bmyYEj)
+  
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+  
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  SOFTWARE.
+
+  The MIT License (MIT)
+
+Copyright (c) 2024 masuwa (https://codepen.io/ma_suwa/pen/WNjQRZZ)
+Fork of an original work [canvas_particle]SMOKE (https://codepen.io/ma_suwa/pen/WNjQRZZ)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+The MIT License (MIT)
+
+Copyright (c) 2024 Bojan Krsmanovic (https://codepen.io/bojankrsmanovic/pen/xOrNLL)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE. -->
+
+  
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<nav class="nav nav--left js-nav">
+  <ul>
+    <li>
+      <a href="https://gongmyeong-201219.github.io/gongmyeong-notice.github.io-/" target="_blank"><span>Notice</span></a>
+    </li>
+    <li>
+      <a href="javascript:alert('준비중입니다.');" onfocus="this.blur()"><span>Profile</span></a>
+    </li>
+    <li>
+      <a href="javascript:alert('준비중입니다.');" onfocus="this.blur()"><span>Background</span></a>
+    </li>
+    <li>
+      <a href="https://gongmyeong-201219.github.io/gongmyeong-history/" target="_blank"><span>History</span></a>
+    </li>
+  </ul>
+</nav>
+
+<figure class="logo">
+   <a href="https://gongmyeong-201219.github.io/gongmyeong.github.io/" target="_blank"><img src="https://i.ibb.co/MDyJqkK/GM-main-txt.png"></a>
+</figure>
+
+<nav class="nav nav--right">
+  <ul>
+    <li>
+      <a href="https://pushoong.com/ask/3691284897" target="_blank"><span>Pushoong</span></a>
+    </li>
+    <li>
+      <a href="https://공명.lrl.kr" target="_blank">
+        <span>Evernote</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
+<div id="myCanvas">
+    <canvas></canvas>
+    <div class="custom-gui-container" id="gui-container"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+</div>
+
+<!-- <div class="hello"></div>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const text = `고성수(高性秀)<br>
+    1981. 9. 19. ~ 2024. 7. 7.<br><br>
+    전 '백림파'의 일원이었으나, 조직의 괴멸 이후 '진재백'의 제안으로 '공명'에 흡수되어 부사장 자리를 꿰찼다.<br>
+    조직이 빠르게 성장하면 할수록 더 높은 지위를 향한 갈망으로 애가 닳았다.<br>
+    야욕에 눈이 먼 그는 중국 각지에 흩어진 전 백림의 세력을 모아 홍콩에 위치시켰다.<br><br>
+    그렇게 호시탐탐 기회를 엿보던 중,<br>
+    6월 30일 현장 인원의 분산을 노려 제1구역에서 통제 중이던 준, 서 헌, 오세진 외 다수를 급습.<br>
+    주요 인물 제거를 통해 조직의 힘을 약화시키려던 계획이 실패로 돌아가고,<br>
+    삽시간에 포진한 조직원들에 의하여 구속된다.<br>
+    모진 고문에 잔존 세력의 위치를 발설했으나 결국 죽음을 맞이하게 된다.`;
+    const target = document.querySelector(".hello");
+    let index = 0;
+
+    function type() {
+      if (index < text.length) {
+        if (text.charAt(index) === '<') {
+          const endTagIndex = text.indexOf('>', index);
+          if (endTagIndex !== -1) {
+            target.innerHTML += text.substring(index, endTagIndex + 1);
+            index = endTagIndex + 1;
+          }
+        } else {
+          target.innerHTML += text.charAt(index);
+          index++;
+        }
+        setTimeout(type, 50); // 타이핑 속도 조절 (100ms)
+      }
+    }
+
+    type();
+  });
+</script> -->
+  
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/99/three.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
